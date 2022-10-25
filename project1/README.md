@@ -1,4 +1,6 @@
-# CMD
+# NOTES
+
+## CMD
 
 - echo %cd% bulunduğun klasörü görmek
 - dir klasörde bulunan dosya ve klasörleri görmek
@@ -6,13 +8,13 @@
 - cd "klasör ismi" klasöre girmek
 - cd .. önceki klasöre dönmek
 
-# MultiCursor
+## MultiCursor
 
 - ctrl+d aynı ifadeleri seçebilmemizi ve tek seferde değiştirmemizi sağlar
 - alt+LMB multicursor için
 - shift+alt+LMB çoklu multicursor kullanmak için
 
-# Keyboard shortcuts
+## Keyboard shortcuts
 
 - alt+aşağı/yukarı ile yapıyı istediğimiz yere taşıyabiliriz
 - shift+aşağı ile yapıyı aşağıya kopyalayabiliriz
@@ -21,11 +23,11 @@
 - ctrl+p menüden projedeki dosyaları açmak için
 - ctrl+ö açıklama satırı
 
-# Snippets
+## Snippets
 
 - Çok tekrar eden yerlerde snippet oluşturmak
 
-# GIT-SCM/Source code management
+## GIT-SCM/Source code management
 
 * Versiyon kontrol sistemi
 * Takımların aynı proje ortamında çalışmasını kolaylaştırır
@@ -37,7 +39,7 @@
 * Hangi dosyaların snapshot aldıktan sonra değiştiğini görebiliriz
 * Projende versiyonlanmamasını istediğini dosyaları, dosya tiplerini(*.log,*.mp4) veya klasörleri belirtebiliriz 
 
-# Markdown
+## Markdown
 ---
 * [Google gitmek için](https://google.com)
 * ![fotoya gitmek](https://picsum.photos/200/300)
@@ -63,7 +65,7 @@ function helloWorld(){
 >> blockquote
 
 
-# HTML
+## HTML
 ### Html etiketi
 * Eğer bir HTML dökümanı oluşturmak isterseniz ilk yapacağınız iş bir <html> etiketi oluşturmaktır
 <!--  <html>
