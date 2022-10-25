@@ -20,6 +20,7 @@
 - ctrl+enter alt satır
 - ctrl+p menüden projedeki dosyaları açmak için
 - ctrl+ö açıklama satırı
+
 # Snippets
 
 - Çok tekrar eden yerlerde snippet oluşturmak
@@ -56,3 +57,40 @@ function helloWorld(){
 ```
 * notion.so md dosyaları destekliyor
 * tek satır kod bloğu için ` çok satır kod bloğu için ```
+**bold text** *italicized text*
+> blockquote
+
+>> blockquote
+
+
+# HTML
+### Html etiketi
+* Eğer bir HTML dökümanı oluşturmak isterseniz ilk yapacağınız iş bir <html> etiketi oluşturmaktır
+<!--  <html>
+        <head>   </head>
+        <body>   </body>
+      </html> -->
+### Head etiketi
+* Head etiketi, site ziyaretçileri tarafından görülmesi gerekmeyen kodları içerir
+* Bu etiket altına yazılan kodlar genellikle arama motorları ve örümcekler (Crawler veya Spider diye geçer) içindir
+* Head etiketi altında bütün etiketleri kullanabilmeniz mümkün değil
+* Kullanılabilir etiketler;
+   - `<title> (Bu etiketi kullanmak şarttır)`
+   - `<meta>`
+   - `<style>`
+   - `<script>`
+   - `<noscript>`
+   - `<link>`
+   - `<base>`
+* html kod
+ <html>
+  <head>
+    <title> Sekmede görülecek isim </title>
+    <metaname="Keywords" content="Html,kodluyoruz">
+  </head>
+  <body></body>
+
+</html>
+*
+
+  
