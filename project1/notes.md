@@ -91,6 +91,72 @@ function helloWorld(){
   <body></body>
 
 </html>
-*
 
+### Body etiketi
+* Web sayfamızda görmek istediğimiz bütün içerikleri <body> etiketi altına yazıyoruz
+* html kod
+<html>
+  <HEAD>
+    <title> Sekmede Görülecek İsim </title>
+    <meta name="Keywords" content="HTML,Kodluyoruz">
+  </HEAD> 
   
+  <BODY>
+    Site İçeriği
+  </BODY>
+</html>
+
+<!DOCTYPE html> : Dökümanımızın HTML dilinde olduğunu tarayıcımıza bildiren talimattır
+<html lang="en"> : Site içeriğinin dilini belirten etiket, "en" yerine "tr" yazabilirsiniz
+
+### H etiketleri
+* H etiketleri başlık etiketleridir. Büyükten küçüğe sırasıyla
+<h1>
+<h2>
+<h3>
+<h4>
+<h5>
+<h6>
+
+Not: HTML otomatik olarak Başlık etiketlerinin öncesine ve sonrasına satır atlatır
+
+### P etiketleri
+* \<p> etiketi paragraf etiketidir. Sayfa içerisinde oluşturacağımız metinleri \<p> etiketi ile oluştururuz
+Not: HTML otomatik olarak Paragraf etiketinin öncesine ve sonrasına satır atlatır
+
+### BR etiketi
+* \<br> etiketi satır atlatma etiketidir ve kapatmaya ihtiyaç duymayan etiketlerden biridir
+
+### A etiketi
+* \<a> etiketinin en önemli özelliği href özelliğidir. Bu etiket ile sayfaları linkleyebiliriz
+* <body>
+    <a href="https://www.kodluyoruz.org">Kodluyoruz</a>
+</body>
+
+### UL-OL-Li etiketleri
+* \<ul> ve \<ol> etiketleri liste oluşturma etiketleridir. Listeyi oluşturduktan sonra içeriğini oluşturmak için \<li> etiketini kullanıyoruz
+* \<ul> = "unordered list" sırasız liste anlamına geliyor. \<ol> = "ordered list" sıralı liste anlamına geliyor
+
+### Strong ve B etiketi
+* \<strong> etiketi bir metinin arama motorlarına önemli olduğunu bildirmek için kullanılır. Kullanıldığı zaman metini kalın yapar. Eğer sadece metini kalınlaştırmak isterseniz \<b> etiketini kullanabilirsiniz.
+
+### Script etiketi
+* \<script> etiketi JavaScript kodlarını HTML içerisine yazabilmemizi sağlar.
+
+### Button etiketi
+* \<button> etiketini buton oluşturmak için kullanırız.
+* <body>
+    <button> asdfgh </button>
+</body>
+
+### img etiketi
+* Resim eklemek için \<img> etiketini kullanıyoruz. <img src=”resim.jpg” alt=”açıklama yazısı” /> src="" kısmına eklemek istediğimiz görselin yolunu yani kaynağını yazmalıyız. Eğer görselimiz ve HTML dosyamız aynı klasörde ise görselin adını ve uzantısını yazmamız yeterlidir. alt="" kısmına görselin açıklamasını yazıyoruz fakat isterseniz boş bırakabilirsiniz. Bu etiket kapanmaya ihtiyaç duymaz.
+
+### iframe etiketi
+* Belge içinde belge gösterebilmemizi sağlayan etikettir. Genelde başka bir sitedeki belgeyi kendi sayfamızda göstermek için kullanırız. örn: Youtube'dan bir videoyu sayfamızda göstermek istersek \<iframe> kodlarını sayfamıza eklememiz yeterli.(video üzerinde sağ tıklayıp yerleştirme kodunu kopyala diyerek iframe kodunu kopyalayabiliriz.)
+* <iframe width="1519" height="581" src="https://www.youtube.com/embed/BHPYQHnD_QA" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+### Yorum satırı
+* HTML dilinde yorum satırı <!-- ile başlar --> ile biter.
