@@ -1,8 +1,11 @@
-# img
+# image
 *.jpg
 *.png
-img/
+images/
 
+# audio
+*.mp3
+audio/
 # videos
 *.mp4
 

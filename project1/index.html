@@ -1,58 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My first website</title>
 </head>
 <body>
-   
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-    
-    <ol>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ol>
+
+    <!--Note-->
+    <h1>This is my website</h1>
+    <hr>
+    <h1>i like pizza!</h1>
+    <br>
+    <h2>i like pizza!</h2>
+    <br>
+    <h3>i like pizza!</h3>
+    <br>
+    <h4>i like pizza!</h4>
+    <br>
+    <h5>i like pizza!</h5>
+    <br>
+    <h6>i like pizza!</h6>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quam eligendi sunt sit qui consectetur sequi tenetur, corrupti quae, dicta vel doloribus ducimus velit nam atque laudantium a commodi voluptatem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam fugit similique nobis sint corrupti, commodi libero blanditiis. Doloribus ipsum aut, laborum totam fugiat quas. Voluptatibus nihil ex quasi repudiandae distinctio.</p>
+    <a href="page2.html" target=_blank title="This takes you to page2">
+        Go to page 2
+    </a>
+    <br>
+    <a href="https://en.wikipedia.org/wiki/Shrek">
+    <img src="images/shrek.jpg" height="300" width="250" alt="This is a picture of Shrek" title="Shrek is shrexy">
+    </a>
+    <br>
+    <audio controls autoplay muted loop>
+        <source src="audio/river-solo.mp3">
+        <source src="audio/river-solo.wav">
+        This browser does not support HTML5 audio
+    </audio>
+    <br>
+    <video controls width="300">
+        <source src="racing.mp4">
+        <source src="racing.WebM">
+        This browser does not support HTML5 audio
+    </video>
+
+    <p>This is normal text</p>
+    <p>This is <b>bold</b> text</p>
+    <p>This is <i>italic</i> text</p>
+    <p>This is <big>big</big> text</p>
+    <p>This is <small>small</small> text</p>
+    <p>This is <sub>subscript</sub> text</p>
+    <p>This is <sup>superscript</sup> text</p>
+    <p>This is <ins>inserted</ins> text</p>
+    <p>This is <del>deleted</del> text</p>
+    <p>This is <mark>marked</mark> text</p>
+
+    <h4>Unordered List</h4>
+      <ul>
+        <li>pizza dough</li>
+        <li>tomato sauce</li>
+        <li>toppings
+            <ul>
+                <li>pepperoni</li>
+                <li>mushroom</li>
+                <li>peppers</li>
+            </ul>
+        </li>
+      </ul>
+
+
+    <h4>Ordered List</h4>
+      <ol type="I">
+        <li>eat breakfast</li>
+        <li>take shower</li>
+        <li>leave for work</li>
+      </ol>
+
+
+    <h4>Description List</h4>
+    <d1>
+      <!-- dt=term dd= definition -->
+      <dt>HTML</dt>
+      <dd>This adds structure to a webpage</dd>
+      <dt>CSS</dt>
+      <dd>This adds style to a webpage</dd>
+      <dt>JavaScript</dt>
+      <dd>This adds functionality to a webpage</dd>
+    </d1>
+
+    <h3>Store Hours</h3>
+
+    <table bgcolor="black" width="700">
+        <tr bgcolor="grey">
+            <th width="100">Sunday</th>
+            <th width="100">Monday</th>
+            <th width="100">Tuesday</th>
+            <th width="100">Wednesday</th>
+            <th width="100">Thursday</th>
+            <th width="100">Friday</th>
+            <th width="100">Saturday</th>
+        </tr>
+        <tr bgcolor="lightgrey" align="center">
+            <td>Closed</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>Closed</td>
+        </tr>
+    </table>
     
 </body>
-</html>
-## HR Etiketi
-
-`<hr>` etiketi konusal bir geçişi temsil eder. Yazı yazarken yeni bir paragrafa başlamaya benzetebiliriz. Varsayılan olarak sayfaya yatay bir çizgi ekler ama bu özelliği değiştirilebilir. Bu etiket kapatılmaya ihtiyaç duymaz.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <p>
-      HTML yani Hiper Metin İşaretleme Dili, web sayfalarında gördüğümüz iskelet
-      yapısını oluşturmak için kullanılan metin işaretleme dilidir.
-    </p>
-
-    <hr>
-
-    <p>
-      CSS, HTML elementlerinin çeşitli medya araçlarında nasıl ekrana
-      yansıtılacağını tanımlayan bir dildir. Tek seferde birden çok sayfa için
-      kurallar belirtebilir.
-    </p>
-
-    <hr>
-
-    <p>
-      JavaScript, HTML ve web için bir programlama dilidir. Dinamil olarak HTML
-      içeriğini ve özelliklerini, CSS'i değiştirebilme gibi işlemleri
-      gerçekleştirebilir.
-    </p>
-  </body>
 </html>
