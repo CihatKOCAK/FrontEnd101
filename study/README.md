@@ -161,4 +161,9 @@ Not: HTML otomatik olarak Paragraf etiketinin öncesine ve sonrasına satır atl
         allowfullscreen></iframe>
 
 ### Yorum satırı
-* HTML dilinde yorum satırı <!-- ile başlar --> ile biter.
+* HTML dilinde yorum satırı <!-- ile başlar --> ile biter
+
+## CSS (Cascading Style Sheets)
+* Inline CSS= Etiket içinde style kullanılır
+* Internal CSS= Head içinde style etiketinde kullanılır
+* External CSS= Head içinde link belirterek kullanılır
