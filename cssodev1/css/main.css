@@ -1,0 +1,51 @@
+.body{
+
+}
+
+.background{
+    margin-top: 40px;
+    position:relative;
+    height: 7cm;
+    border-radius:7px;
+    padding: 20px;
+    background:url(/cssodev1/img/main.jpeg) center/cover no-repeat;
+}
+
+.background-container{
+    text-align: center;
+    color: white;
+    font-style:italic;
+    font-size: xx-large;
+}
+
+/* NAV BAR */
+.nav-bar{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 2.5%;
+}
+
+.nav-center{
+
+}
+
+.nav-header{
+
+}
+
+.nav-logo{  
+    height: 180p;  
+}
+
+.nav-links{
+    display: inline;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+/* Tags */
+.tags{
+
+}
+.tag-list{
+    display:grid ;
+}
