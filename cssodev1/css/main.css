@@ -1,51 +1,115 @@
-.body{
-
+/**** Main ****/
+main{
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+body{
+    font-family: Barlow, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
-.background{
-    margin-top: 40px;
-    position:relative;
-    height: 7cm;
-    border-radius:7px;
-    padding: 20px;
-    background:url(/cssodev1/img/main.jpeg) center/cover no-repeat;
-}
-
-.background-container{
-    text-align: center;
-    color: white;
-    font-style:italic;
-    font-size: xx-large;
+p{
+    font-size: 14px;
 }
 
 /* NAV BAR */
 .nav-bar{
+    width: 971.33px;
+    height: 96px;
     display: flex;
-    margin-left: 5%;
-    margin-top: 2.5%;
+    align-items: center;
 }
 
 .nav-center{
-
+    width: 887.396px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-header{
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.nav-logo{  
-    height: 180p;  
+.nav-header img{
+    width: 200px;
+}
+.nav-logo{
+    
 }
 
 .nav-links{
-    display: inline;
-    letter-spacing: 1px;
-    padding: 10px;
+    display: flex;
+    margin-left: 4%;
+    column-gap: 12.5%;
 }
-/* Tags */
-.tags{
 
+/* NAV BAR END */
+
+.header{
+    /* margin-top: 40px; */
+    margin-top: 3%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:4px;
+    background:url(/cssodev1/img/main.jpeg) center/cover no-repeat;
+}
+
+.header-container{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+}
+
+/* Tags and recipe */
+.tags-recipe{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    
+}
+
+    /* Tags */
+.tags{
+    font-size: 14px;
+    width: 20%;
 }
 .tag-list{
-    display:grid ;
+    margin-top: 4%;
+    display:grid;
+    font-size:medium;
+    grid-gap: 7.5px;
+}
+
+    /* Recipe container */
+.recipe-container{
+    display: flex;
+    width: 80%;
+    
+}
+
+.recipe-test{
+    display: grid;
+    width: 100%;
+}
+
+.recipe-images{
+    display: block;
+    margin-top: 5%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.recipe-images img{
+    height: 160px;
+    border-radius: 4px;
+}
+
+.recipe-title{
+    display: flex;
 }
