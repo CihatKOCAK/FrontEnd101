@@ -160,10 +160,10 @@ Not: HTML otomatik olarak Paragraf etiketinin öncesine ve sonrasına satır atl
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 
-### Yorum satırı
-* HTML dilinde yorum satırı <!-- ile başlar --> ile biter
-
 ## CSS (Cascading Style Sheets)
 * Inline CSS= Etiket içinde style kullanılır
 * Internal CSS= Head içinde style etiketinde kullanılır
 * External CSS= Head içinde link belirterek kullanılır
+* Margin= Elementlerin birbirine uzaklığı
+* Padding= Element kenarı ile element içeriği arasındaki boşluk
+* 
