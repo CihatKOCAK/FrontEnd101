@@ -50,7 +50,7 @@ h4{
 .header-container {
     height: 231.73px;
     background: linear-gradient(rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)), url(/img/main.jpeg) center/cover no-repeat;
+    rgba(0, 0, 0, 0.4)), url(../img/main.jpeg) center/cover no-repeat;
     align-items: center;
     border-radius: 5px;
     margin-top: 2rem;
