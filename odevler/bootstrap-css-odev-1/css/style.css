@@ -59,6 +59,12 @@ h4{
 .header {
     text-align: center;
 }
+
+.about-header{
+    align-items: center;
+}
+.about-header-txt{
+}
 /* HEADER END */
 /* SECTION */
 .recipe-container{
@@ -92,7 +98,7 @@ h4{
 
 .recipe-image{
     height: 180px;
-    width: 285px;
+    width: 18rem;
     border-radius: 4px;
 }
 /* SECTION END */
