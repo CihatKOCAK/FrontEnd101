@@ -32,6 +32,8 @@ font-size: 16px;
     top: 0;
     z-index: 1000;
 }
+    
+
 /* nav */
 .nav-container{
     height: 75px;
@@ -82,7 +84,8 @@ font-size: 16px;
 /* ASIDE */
 .aside-container{
     position:sticky;
-    top: 0;
+    top: 5rem;
+    margin-top: 5rem;
     z-index: 999;
     height: max-content;
     background-color: white;
@@ -96,4 +99,14 @@ font-size: 16px;
     width: max-content;
     margin-right: 8px;
     height: 34px;
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        height: 5rem !important;
+    }
+
+    .aside-container{
+        margin-top: 0 rem;
+    }
 }
