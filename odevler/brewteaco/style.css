@@ -1,0 +1,78 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Belanosima', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+h2 {
+    font-size: 65px;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+}
+
+
+.center-elm {
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.nav-links {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none !important;
+}
+
+.hero {
+    height: 720px;
+    background-image: url(images/hero/heromain.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(90%);
+    z-index: 900;
+}
+
+.hero h6 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.67;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.hero button {
+    width: 400px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.slider-container{
+    height: 720px;
+    background-color: white;
+}
+
+.slider-container button{
+    margin-top: 20px;
+    width: 250px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+} 
