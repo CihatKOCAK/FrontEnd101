@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const encrypt = require("mongoose-encryption")
-
+// const encrypt = require("mongoose-encryption")
 const app = express();
+const CryptoJS = require("crypto-js");
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -24,8 +25,9 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-const secret = "thisisourlittlesecret.";
-userSchema.plugin(encrypt, { secret: secret, encryptedFields: ["password"] });
+// userSchema.plugin(encrypt, { secret: process.env.SECRET_KEY, encryptedFields: ["password"] });
+
+
 
 const User = mongoose.model("User", userSchema);
 
@@ -39,10 +41,10 @@ app.route("/login")
     })
     .post(function (req, res) {
         const username = req.body.username;
-        const password = req.body.password;
+        const passwordHash = CryptoJS.SHA256(req.body.password).toString(CryptoJS.enc.Hex);
         User.findOne({ email: username }).then(function (foundUser) {
-            if (foundUser.password === password) {
-                console.log("YES");
+            if (foundUser.password === passwordHash) {
+                console.log("Giriş başarılı.");
                 res.render("secrets");
             } else {
                 console.log("Şifre yanlış");
@@ -63,9 +65,10 @@ app.route("/register")
     .post(function (req, res) {
         User.findOne({ email: req.body.username }).then(function (foundUserName) {
             if (!foundUserName) {
+                const passwordHash = CryptoJS.SHA256(req.body.password).toString(CryptoJS.enc.Hex);
                 const newUser = new User({
                     email: req.body.username,
-                    password: req.body.password
+                    password: passwordHash
                 });
                 newUser.save().then(function () {
                     res.render("secrets");
@@ -74,7 +77,8 @@ app.route("/register")
                     console.log(err);
                 })
             } else {
-                console.log("Already taken.")
+                console.log("Already taken.");
+                res.redirect("/");
             }
         })
     });
