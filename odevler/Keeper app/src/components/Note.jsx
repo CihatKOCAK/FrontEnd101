@@ -1,20 +1,14 @@
 import React from "react";
-import notes from "../notes";
 
-function Note(props) {
-  const {title, content} = props.note;
-  
+function NoteEntry(props) {
   return (
-    <div className="note">
-      <h1>{title}</h1>
-      <p>{content}</p>
-    </div>
-  );
-}
-
-function NoteEntry (){
-  return(
-  notes.map((notesData,index)=>(<Note key={index} note={notesData} />)))
+    props.notes.map((notesData, index) => (
+      <div id={index} key={index} className="note">
+        <h1>{notesData.title}</h1>
+        <p>{notesData.content}</p>
+      </div>
+    ))
+  )
 }
 
 export default NoteEntry;
