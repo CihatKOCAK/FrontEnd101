@@ -4,7 +4,7 @@ function ListsEntry(props) {
 
     return (
         props.items.map((itemsData, index) => (
-            <li key={index}>{itemsData}</li>))
+            <li onClick={props.onChecked} id={index} key={index}>{itemsData}</li>))
 
     )
 }

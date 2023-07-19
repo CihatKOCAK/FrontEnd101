@@ -5,6 +5,14 @@ import ListsEntry from "./Lists";
 function App() {
   const [items, setItems] = useState([]);
 
+  function DeleteEntry(event) {
+    console.log(event.target.id);
+    setItems((prevItems) => {
+      items.splice(event.target.id, 1)
+      return [...prevItems]
+    })
+  }
+
   return (
     <div className="container">
       <div className="heading">
@@ -13,7 +21,7 @@ function App() {
       <Header setItems={setItems} />
       <div>
         <ul>
-          <ListsEntry items={items} eren={"eren"} />
+          <ListsEntry items={items} onChecked={DeleteEntry} />
         </ul>
       </div>
     </div>
