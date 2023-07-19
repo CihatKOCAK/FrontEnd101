@@ -6,12 +6,11 @@ function App() {
   const [items, setItems] = useState([]);
 
   function DeleteEntry(event) {
-    console.log(event.target.id);
-    setItems((prevItems) => {
-      items.splice(event.target.id, 1)
-      return [...prevItems]
-    })
+    const itemId = parseInt(event.target.id, 10);
+    setItems((prevItems) => prevItems.filter((_, index) => index !== itemId));
+    console.log(itemId)
   }
+  
 
   return (
     <div className="container">
