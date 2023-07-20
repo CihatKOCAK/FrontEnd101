@@ -6,6 +6,7 @@ function CreateArea(props) {
         content: ""
     }
     )
+    const [isExpanded, setIsExpanded] = useState(false);
 
     function handleChange(event) {
         const { name, value } = event.target;
@@ -14,16 +15,22 @@ function CreateArea(props) {
         })
     }
 
+    function Expand() {
+        setIsExpanded(true);
+    }
+
     return (
         <div>
             <form>
-                <input value={inputNote.title} onChange={handleChange} name="title" placeholder="Title" />
-                <textarea value={inputNote.content} onChange={handleChange} name="content" placeholder="Take a note..." rows="3" />
-                <button onClick={(event) => {
+                {isExpanded ? <input value={inputNote.title} onChange={handleChange} name="title" placeholder="Title" /> : null}
+
+                <textarea value={inputNote.content} onChange={handleChange} onClick={Expand} name="content" placeholder="Take a note..." rows={isExpanded ? 3 : 1} />
+
+                {isExpanded ? <button onClick={(event) => {
                     props.notePush(inputNote);
-                    setInputNote({title:"",content:""});
+                    setInputNote({ title: "", content: "" });
                     event.preventDefault();
-                }}>Add</button>
+                }}>Add</button> : null}
             </form>
         </div>
     );
