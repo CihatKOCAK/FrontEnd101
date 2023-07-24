@@ -19,6 +19,10 @@ function CreateArea(props) {
         setIsExpanded(true);
     }
 
+    function postData(inputNote){
+    console.log(inputNote);
+  }
+
     return (
         <div>
             <form>
@@ -27,6 +31,7 @@ function CreateArea(props) {
                 <textarea value={inputNote.content} onChange={handleChange} onClick={Expand} name="content" placeholder="Take a note..." rows={isExpanded ? 3 : 1} />
 
                 {isExpanded ? <button onClick={(event) => {
+                    postData();
                     props.notePush(inputNote);
                     setInputNote({ title: "", content: "" });
                     event.preventDefault();
