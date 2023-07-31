@@ -1,29 +1,109 @@
-import "./singlepost.css"
+import { Link, useLocation } from "react-router-dom";
+import "./singlepost.css";
+import { useEffect, useState, useContext } from "react";
+import axios from "axios";
+import { Context } from "../../context/Context";
 
 function SinglePost() {
-    return (
-        <div className="singlePost">
-            <div className="singlePostWrapper">
-                <img src="https://i4.hurimg.com/i/hurriyet/75/1110x740/5b0e5ddabf49c21958da2d8a.jpg"
-                    alt=""
-                    className="singlePostImg" />
-                <h1 className="singlePostTitle">
-                    Lorem ipsum dolor sit amet.
-                    <div className="singlePostEdit">
-                    <i className="singlePostIcon fa-solid fa-pen-to-square"></i>
-                    <i className="singlePostIcon fa-solid fa-trash"></i>
-                    </div>
-                </h1>
-                <div className="singlePostInfo">
-                    <span className="singlePostAuthor">Author: <b>Eren</b></span>
-                    <span className="singlePostDate">1 hour ago</span>
-                </div>
-                <p className="singlePostDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam expedita explicabo facilis soluta, autem dolorum facere eveniet, voluptate consectetur quis, inventore ipsum! Quaerat ad accusantium temporibus hic inventore dolorum odio.
-                Molestias, eos tempore odio est perspiciatis repellendus! Officiis fuga facere ullam dolores itaque perspiciatis minus nobis dolor tenetur voluptate, eveniet quos beatae eos consectetur incidunt atque ea quae ut debitis!
-                Non soluta aperiam nemo quasi rerum iste quas magni, dolor illo vero! Placeat cupiditate harum ut rem! Unde accusantium nihil vero doloribus rem assumenda et deleniti facere? Ad, impedit ipsum.</p>
-            </div>
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  const PF = "http://localhost:5000/images/";
+  const [post, setPost] = useState({});
+  const { user } = useContext(Context);
+
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [updateMode, setUpdateMode] = useState(false);
+
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get("/posts/" + path);
+      setPost(res.data);
+      setTitle(res.data.title);
+      setDesc(res.data.desc);
+    };
+    getPost();
+  }, [path]);
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/posts/${post._id}`, {
+        data: { username: user.username },
+      });
+      window.location.replace("/");
+    } catch (err) {}
+  };
+
+  const handleUpdate = async () => {
+    try {
+      await axios.put(`/posts/${post._id}`, {
+        username: user.username,
+        title,
+        desc,
+      });
+      setUpdateMode(false)
+    } catch (err) {}
+  };
+
+  return (
+    <div className="singlePost">
+      <div className="singlePostWrapper">
+        {post.photo && (
+          <img src={PF + post.photo} alt="" className="singlePostImg" />
+        )}
+        {updateMode ? (
+          <input
+            type="text"
+            value={title}
+            className="singlePostTitleInput"
+            autoFocus
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        ) : (
+          <h1 className="singlePostTitle">
+            {title}
+            {post.username === user?.username && (
+              <div className="singlePostEdit">
+                <i
+                  onClick={() => setUpdateMode(true)}
+                  className="singlePostIcon fa-solid fa-pen-to-square"
+                ></i>
+                <i
+                  onClick={handleDelete}
+                  className="singlePostIcon fa-solid fa-trash"
+                ></i>
+              </div>
+            )}
+          </h1>
+        )}
+        <div className="singlePostInfo">
+          <span className="singlePostAuthor">
+            Author:
+            <Link to={`/?user=${post.username}`}>
+              <b>{post.username}</b>
+            </Link>
+          </span>
+          <span className="singlePostDate">
+            {new Date(post.createdAt).toDateString()}
+          </span>
         </div>
-    )
+        {updateMode ? (
+          <textarea
+            className="singlePostDescInput"
+            value={desc}
+            onChange={(e) => setDesc(e.target.value)}
+          />
+        ) : (
+          <p className="singlePostDesc">{desc}</p>
+        )}
+        {updateMode && (
+          <button className="singlePostButton" onClick={handleUpdate}>
+            Update
+          </button>
+        )}
+      </div>
+    </div>
+  );
 }
 
-export default SinglePost
+export default SinglePost;
